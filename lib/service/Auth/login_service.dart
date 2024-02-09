@@ -5,6 +5,7 @@ import 'package:pressure_monitor_flutter/service/LocalData/local_data.dart';
 class LoginService {
   AuthApi api = AuthApi();
   LocalData localData = LocalData();
+  
   Future<bool> login(String email, String password) async {
     String token = await api.login(email, password);
     if (token != '') {

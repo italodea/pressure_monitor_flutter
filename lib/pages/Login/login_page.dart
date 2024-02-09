@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:ionicons/ionicons.dart';
+import 'package:pressure_monitor_flutter/pages/Login/components/navigate_button.dart';
 import 'package:pressure_monitor_flutter/pages/Login/components/submit_button.dart';
 import 'package:pressure_monitor_flutter/pages/Login/components/text_input.dart';
 import 'package:pressure_monitor_flutter/routes/routes.dart';
@@ -21,15 +22,15 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  LoginService loginService = LoginService();
+  final _formKey = GlobalKey<FormState>();
   final TextEditingController _email = TextEditingController();
   final TextEditingController _password = TextEditingController();
+  LoginService loginService = LoginService();
   LoginValidation formValidator = LoginValidation();
-  final _formKey = GlobalKey<FormState>();
+  String _errorMessage = '';
 
   LocalData localData = LocalData();
 
-  String _errorMessage = '';
 
   Future<void> signInWithGoogle() async {
     final GoogleSignInAccount? googleUser =
@@ -71,6 +72,7 @@ class _LoginPageState extends State<LoginPage> {
         toolbarHeight: 0,
         backgroundColor: AppColors.primaryColor,
       ),
+      backgroundColor: AppColors.backgroundColor,
       body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 12),
         child: Column(
@@ -107,7 +109,8 @@ class _LoginPageState extends State<LoginPage> {
               sizeDuration: const Duration(milliseconds: 200),
               child: Center(
                 child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 12),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 8, vertical: 12),
                   decoration: BoxDecoration(
                     color: Colors.red,
                     borderRadius: BorderRadius.circular(10),
@@ -143,6 +146,10 @@ class _LoginPageState extends State<LoginPage> {
                       _errorMessage = value;
                     }),
                   ),
+                  const NavigateButton(
+                    route: AppRoute.REGISTER,
+                    title: "Registrar",
+                  )
                 ],
               ),
             ),
