@@ -50,7 +50,9 @@ class ReportService {
         ),
       );
 
-      Directory? output = await pp.getDownloadsDirectory();
+      Directory? output = Platform.isAndroid
+          ? await pp.getDownloadsDirectory()
+          : await pp.getApplicationDocumentsDirectory();
 
       final timestamp = DateTime.now().millisecondsSinceEpoch;
       final file = File("${output?.path}/pressure_report_$timestamp.pdf");
