@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:animated_size_and_fade/animated_size_and_fade.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -13,6 +15,8 @@ import 'package:pressure_monitor_flutter/themes/app_colors.dart';
 import 'package:pressure_monitor_flutter/themes/app_text.dart';
 import 'package:pressure_monitor_flutter/validation/login_validation.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -31,13 +35,20 @@ class _LoginPageState extends State<LoginPage> {
 
   LocalData localData = LocalData();
 
-
   Future<void> signInWithGoogle() async {
-    final GoogleSignInAccount? googleUser =
-        await GoogleSignIn(signInOption: SignInOption.standard).signIn();
+    GoogleSignIn googleUser = GoogleSignIn(
+      signInOption: SignInOption.standard,
+    );
+    if (Platform.isIOS) {
+      googleUser = GoogleSignIn(
+        signInOption: SignInOption.standard,
+        clientId: dotenv.env['iosClientId'],
+      );
+    }
 
-    final GoogleSignInAuthentication? googleAuth =
-        await googleUser?.authentication;
+    GoogleSignInAccount? user = await googleUser.signIn();
+
+    final GoogleSignInAuthentication? googleAuth = await user?.authentication;
 
     final credential = GoogleAuthProvider.credential(
       accessToken: googleAuth?.accessToken,
