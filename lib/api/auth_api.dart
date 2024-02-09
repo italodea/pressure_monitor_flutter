@@ -49,4 +49,27 @@ class AuthApi {
     }
     return "";
   }
+
+  Future<String> register(String name, String email, String password) async {
+    var headers = {
+      'Content-Type': 'application/json',
+    };
+    var request = http.Request(
+        'POST', Uri.parse("${dotenv.env['API_URL']}/api/auth/register"));
+
+    request.body =
+        json.encode({"name": name, "email": email, "password": password});
+    request.headers.addAll(headers);
+
+    http.StreamedResponse response = await request.send();
+
+    if (response.statusCode == 200) {
+      var body = jsonDecode(await response.stream.bytesToString());
+      return body['accessToken'];
+    }
+    if(response.statusCode == 401) {
+      throw Exception('Email já cadastrado');
+    }
+    return "";
+  }
 }

@@ -14,7 +14,17 @@ class LoginValidation {
       return 'Senha é obrigatória';
     }
     if (value.length < 3) {
-      return 'A senha precisa de pelo menos 6 caracteres';
+      return 'A senha precisa de pelo menos 3 caracteres';
+    }
+    return null;
+  }
+
+  String? validateName(String value) {
+    if (value.isEmpty) {
+      return 'Nome é obrigatório';
+    }
+    if (value.length < 3) {
+      return 'O nome precisa de pelo menos 3 caracteres';
     }
     return null;
   }

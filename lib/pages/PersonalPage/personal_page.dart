@@ -3,7 +3,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:pressure_monitor_flutter/routes/routes.dart';
 import 'package:pressure_monitor_flutter/service/LocalData/local_data.dart';
-import 'package:pressure_monitor_flutter/themes/app_colors.dart';
 import 'package:pressure_monitor_flutter/themes/app_text.dart';
 
 class PersonalPage extends StatefulWidget {
@@ -84,25 +83,6 @@ class _PersonalPageState extends State<PersonalPage> {
                   ),
                   const SizedBox(
                     height: 20,
-                  ),
-                  ElevatedButton.icon(
-                    style: ElevatedButton.styleFrom(
-                        foregroundColor: AppColors.primaryColor,
-                        backgroundColor: AppColors.lightColor),
-                    onPressed: () {
-                      localData.removeToken();
-                      Navigator.popUntil(context, (route) => route.isFirst);
-                      Navigator.pushReplacementNamed(context, AppRoute.LOGIN);
-                    },
-                    icon: const Icon(
-                      Ionicons.pencil_outline,
-                    ),
-                    label: Text(
-                      "Editar dados",
-                      style: AppText.headlineMedium.merge(
-                        AppText.primaryColor,
-                      ),
-                    ),
                   ),
                   const SizedBox(
                     height: 20,
