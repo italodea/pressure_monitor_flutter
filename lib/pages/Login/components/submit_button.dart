@@ -45,8 +45,6 @@ class _SubmitButtonState extends State<SubmitButton> {
                     _isLoading = true;
                   });
                   widget.errorMessage("");
-                  await Future.delayed(const Duration(seconds: 1));
-
                   try {
                     await loginService.login(
                         widget.email.text, widget.password.text);
