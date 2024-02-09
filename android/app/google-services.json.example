@@ -1,0 +1,134 @@
+{
+  "project_info": {
+    "project_number": "MOD_HERE_messagingSenderId",
+    "project_id": "MOD_HERE_projectId",
+    "storage_bucket": "MOD_HERE_storageBucket"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:MOD_HERE_messagingSenderId:android:1d92782051f8177fe99c27",
+        "android_client_info": {
+          "package_name": "com.example.bookbuzz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "MOD_HERE_messagingSenderId-r85sva7bq4kb70dav3jqa9qn8bn1f2sq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "MOD_HERE_API_KEY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "MOD_HERE_messagingSenderId-r85sva7bq4kb70dav3jqa9qn8bn1f2sq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "MOD_HERE_messagingSenderId-h4u6metmmpqajsglhue81il91q2uotep.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.pressureMonitorFlutter"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "MOD_HERE_APP_ID",
+        "android_client_info": {
+          "package_name": "com.example.pressure_monitor_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "MOD_HERE_messagingSenderId-qlth1tk5uv6i0j148m9bn8qriho20h88.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pressure_monitor_flutter",
+            "certificate_hash": "eba31d31181d154321031e1dfe9f33e01e0bb548"
+          }
+        },
+        {
+          "client_id": "MOD_HERE_messagingSenderId-r85sva7bq4kb70dav3jqa9qn8bn1f2sq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "MOD_HERE_API_KEY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "MOD_HERE_messagingSenderId-r85sva7bq4kb70dav3jqa9qn8bn1f2sq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "MOD_HERE_messagingSenderId-h4u6metmmpqajsglhue81il91q2uotep.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.pressureMonitorFlutter"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:MOD_HERE_messagingSenderId:android:52c87227ab4ed9e6e99c27",
+        "android_client_info": {
+          "package_name": "com.italodea.meusgastos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "MOD_HERE_messagingSenderId-p5vc77dik9qac2ododv319ejje0pi206.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.italodea.meusgastos",
+            "certificate_hash": "8b0da64af1e4708e5245f1d3679e765411ced994"
+          }
+        },
+        {
+          "client_id": "MOD_HERE_messagingSenderId-r85sva7bq4kb70dav3jqa9qn8bn1f2sq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "MOD_HERE_API_KEY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "MOD_HERE_messagingSenderId-r85sva7bq4kb70dav3jqa9qn8bn1f2sq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "MOD_HERE_messagingSenderId-h4u6metmmpqajsglhue81il91q2uotep.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.pressureMonitorFlutter"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
